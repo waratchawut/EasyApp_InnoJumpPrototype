@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIS STAFF SELLER</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <style>
+        /* Your existing CSS styles here */
+
+        /* Style the total summary element */
+        .total-summary {
+            position: absolute;
+            top: 400px; /* Adjust the top position as needed */
+            right: 80px; /* Adjust the right position as needed */
+            background-color: #4CAF50; /* Green background color */
+            color: #fff; /* Text color */
+            padding: 10px; /* Add padding for better visual appearance */
+            font-size: 18px; /* Adjust the font size as needed */
+            border-radius: 5px; /* Add border radius */
+        }
+    </style>
+
 </head>
 <body>
 
@@ -14,12 +32,15 @@
     <header>
 
 
+        <div class="welcome-message">
+            Welcome Aunjai InnoJump
+        </div>
         
 
         
         
             <div class="logo">
-                <img src="Advanced_Info_Service_logo.png" alt="Logo">
+                <a href="index.html"><img src="Advanced_Info_Service_logo.png" alt="Logo"></a>
             </div>
 
             <div class="search-bar">
@@ -39,28 +60,174 @@
 
     <nav>
         <div class="section-title">
-            Services Menu
+            Campaign
         </div>
+        
+    </nav>
+    
+
+   
+
+
+
+    <nav>
         <ul class="menu-grid">
-            <!-- Your grid items here -->
+            
+            <li><a href="sale.html"><div class="icon"><img src="icon_pg1_sale.jpg" alt="Icon 1"></div></a></li>
+            <li><a href="services.html"><div class="icon"><img src="icon_pg1_service.jpg" alt="Icon 2"></div></a></li>
+            <li><a href="https://ikm.ais.co.th/"><div class="icon"><img src="icon_pg1_ikm.jpg" alt="Icon 3"></div></a></li>
+     
+        </ul>
+    </nav>
+
+
+
+
+
+    <div style="background-color: white; margin: 70px;">
+        <canvas id="commissionChart" width="400" height="100"></canvas>
+         <!-- Display the total summary element -->
+         <div class="total-summary" id="totalSummary">
+            Total Commission: Calculating...
+        </div>
+        
+    </div>
+
+    
+
+    <script>
+        // Data for the commission graph (sample data for each month)
+        const commissionData = [3500, 500, 3000, 2500, 5000, 3500, 1000, 3500, 5000, 1500, 1000, 3500];
+        
+         // Calculate the total commission
+         const totalCommission = commissionData.reduce((total, amount) => total + amount, 0);
+
+        // Get the total summary element by ID
+        const totalSummaryElement = document.getElementById('totalSummary');
+
+        // Update the total summary element with the calculated total
+        totalSummaryElement.textContent = `Total Commission: $${totalCommission}`;
+
+        // Labels for the months
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    
+        // Get the canvas element and create a chart
+        const canvas = document.getElementById('commissionChart');
+        const ctx = canvas.getContext('2d');
+    
+        // Create the commission chart
+        const commissionChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: months,
+        datasets: [{
+            label: 'Commission (Baht)',
+            data: commissionData,
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+        }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Monthly Commission Chart',
+                font: {
+                    size: 16,
+                    weight: 'bold',
+                },
+            },
+        },
+        layout: {
+            padding: {
+                left: 50, // Adjust the left padding as needed
+                right: 50, // Adjust the right padding as needed
+                top: 50, // Adjust the top padding as needed
+                bottom: 50, // Adjust the bottom padding as needed
+            },
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Commission (Baht)',
+                }
+            }
+        },
+                plugins: {
+                    legend: {
+                        display: false, // Hide the legend
+                    },
+                    annotation: {
+                        annotations: [{
+                            type: 'line',
+                            mode: 'horizontal',
+                            scaleID: 'y',
+                            borderColor: 'red', // Trendline color
+                            borderWidth: 2, // Trendline width
+                            value: 3000, // Adjust this value for your trendline position
+                            label: {
+                                content: 'Trendline', // Trendline label
+                                position: 'end',
+                                enabled: true,
+                                backgroundColor: 'rgba(255, 255, 255, 0.8)', // Label background color
+                            }
+                        }]
+                    }
+                },
+                elements: {
+                    bar: {
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)', // Set the background color for bars
+                    }
+                }
+            }
+        });
+    </script>
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav ul2>
+        <ul class="menu-grid-four">
+            
+            <li><a href="."><div class="icon"><img src="icon_pg1_home.jpg" alt="Icon 1"></div></a></li>
+            <li><a href="https://tts.intra.ais/"><div class="icon"><img src="icon_pg1_job.jpg" alt="Icon 2"></div></a></li>
+            <li><a href="#"><div class="icon"><img src="icon_pg1_benefit.jpg" alt="Icon 3"></div></a></li>
+            <li><a href="#"><div class="icon"><img src="icon_pg1_setting.jpg" alt="Icon 3"></div></a></li>
+     
         </ul>
     </nav>
     
 
 
-    <nav>
-        <ul class="menu-grid">
-            <li><a href="move_carrier.html"><div class="icon"><img src="Icon1_ChangeSim.jpg" alt="Icon 1"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon2_BuySim.jpg" alt="Icon 2"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon3_ActivateSim.jpg" alt="Icon 3"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon4_ApplyFibre.jpg" alt="Icon 4"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon5_ChangeSpeed.jpg" alt="Icon 5"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon6_PaymentHistory.jpg" alt="Icon 6"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon7_Packages.jpg" alt="Icon 7"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon8_Promotion.jpg" alt="Icon 8"></div></a></li>
-            <li><a href="#"><div class="icon"><img src="Icon9_LifeStore.jpg" alt="Icon 9"></div></a></li>
-        </ul>
-    </nav>
+
+    
+
+
+
+
+
+
     
     
     <main>
