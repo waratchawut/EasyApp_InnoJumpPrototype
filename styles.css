@@ -1,0 +1,242 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background colors */
+body {
+    background-color: #a1d221; /* Light green background */
+    font-family: 'Thai Sans Lite', sans-serif;
+}
+
+/* Style the top bar containing the logo and user info */
+
+
+
+
+header {
+    background-color: #ffffff; /* White background for the header */
+    padding: 50px; /* 20% of total page width for white area */
+    display: flex;
+    justify-content: space-between; /* Distribute space between the two elements */
+    align-items: center; /* Vertically center the content */
+}
+
+/* Style the logo */
+header .logo img {
+    max-width: 150px; /* Adjust the maximum width to your desired size */
+    height: auto;
+}
+
+/* Style the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px; /* Add some spacing between input and logo */
+}
+
+/* Style the search logo */
+.search-bar img {
+    max-width: 30px; /* Adjust the maximum width to your desired size */
+    height: auto;
+}
+
+/* Style the navigation menu */
+nav {
+    background-color: #a1d221; /* Light green background for the menu */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* You can adjust the color as needed */
+}
+
+/* Style the icons (replace with your actual icons) */
+.icon {
+    width: 50px; /* Adjust icon size as needed */
+    height: 50px;
+    background-color: #333; /* Icon background color */
+    border-radius: 50%; /* Make it round */
+}
+
+
+
+/* Style the section title */
+.section-title {
+    text-align: left; /* Center the text */
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add some space between the title and the grid */
+    margin-left: 20px; /* Adjust the left margin as needed */
+    margin-top: 20px;
+    color: white; /* Set the color to white */
+    font-weight: bold; /* Make the text bold */
+    
+}
+
+
+
+
+/* Style the menu grid */
+.menu-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
+    grid-gap: 10px; /* Add some spacing between icons */
+    padding: 10px; /* Add padding as needed */
+    justify-items: center; /* Center items horizontally within each grid cell */
+    align-items: center; /* Center items vertically within each grid cell */
+}
+
+/* Style the icon divs */
+.icon {
+    width: 140px; /* Adjust icon size as needed */
+    height: 140px;
+    /*background-color: transparent; /* Remove circular background color */
+    background-color: white; /* Remove circular background color */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Clip images within the circle */
+    border: 5px solid #333; /* Add a border around the circle */
+}
+
+/* Style the icon images */
+.icon img {
+    max-width: 100%; /* Ensure the image fits within the circle */
+    max-height: 100%;
+    border-radius: 50%; /* Make sure the image itself is also round */
+}
+
+
+
+.icon_sub_page {
+    width: 100px; /* Adjust icon size as needed */
+    height: 100px;
+    /*background-color: transparent; /* Remove circular background color */
+    background-color: white; /* Remove circular background color */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Icon text color */
+    font-size: 18px; /* Icon text size */
+    overflow: hidden; /* Clip images within the circle */
+    border: 5px solid #333; /* Add a border around the circle */
+    margin: 20px auto; /* Add margin as needed */
+}
+
+/* Style the icon images */
+.icon_sub_page img {
+    max-width: 100%; /* Ensure the image fits within the circle */
+    max-height: 100%;
+    /*border-radius: 50%; /* Make sure the image itself is also round */
+}
+
+
+
+
+/* Style the icon links */
+.menu-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Style the home icon */
+.home-icon {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-color: white; /* White background */
+    padding: 1px; /* Add padding for space around the image */
+    border-radius: 50%; /* Make it round */
+    
+}
+
+
+/* Add this CSS style to create rounded input fields */
+.rounded-input {
+    border-radius: 5px; /* Adjust the radius as needed */
+    padding: 5px; /* Add padding for better visual appearance */
+}
+
+
+/* Style the dropdown menus with border-radius */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Style the dropdown select elements */
+.dropdown select {
+    padding: 5px;
+    border-radius: 5px; /* Add border radius */
+}
+
+
+/* Style the buttons with a 5px border */
+.buttons button {
+    margin-top: 10px;
+    border: 5px solid #333; /* Add a 5px solid border with the desired color */
+    padding: 10px 20px; /* Add padding for better visual appearance */
+    background-color: #fff; /* Background color for buttons */
+    color: #333; /* Text color for buttons */
+    cursor: pointer;
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Style the buttons on hover */
+.buttons button:hover {
+    background-color: #333; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+
+/* Style the "OK" button with margin to shift it right */
+.buttons #proceedButton {
+    margin-top: 10px;
+    margin-left: 10px; /* Add margin to the left to shift it right */
+    border: 5px solid #333;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style the "Cancel" button as before */
+.buttons #cancelButton {
+    margin-top: 10px;
+    border: 5px solid #333;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style the buttons on hover as before */
+.buttons button:hover {
+    background-color: #333;
+    color: #fff;
+}
